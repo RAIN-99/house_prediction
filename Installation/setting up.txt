@@ -1,0 +1,5 @@
+conda create --name myenv
+conda env list - check all existing  envs
+conda activate  myenv <name of env> - switch to exact environment
+conda install -c anaconda pip  # installation pip
+pip install -r requirements.txt
