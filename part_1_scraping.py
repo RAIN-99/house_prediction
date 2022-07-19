@@ -36,9 +36,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install(),options=options)
 driver.get(link)
 
 """---
-
 # 2 Testing navigation buttons
-
 ### 2.1 Clicking house links and back button
 """
 
@@ -61,7 +59,6 @@ next_page = [button for button in navigation_buttons if button.text.strip()=="»
 next_page[0].click()
 
 """---
-
 # 3 Scraping one house information
 """
 
@@ -109,11 +106,8 @@ page_soup = BeautifulSoup(driver.page_source, "lxml")
 #description = page_soup.find('div', attrs={'class':'description'}).text
 
 """---
-
 # 4 Automation
-
 ### 4.1 Defining function for scraping one house information
-
 """
 
 def scrape_one_house_info(page_soup):
@@ -306,9 +300,3 @@ for page_number in tqdm(np.arange(start_page_number, end_page_number), position=
       #  houses_df = pd.DataFrame(columns=columns_for_df)
 
 save_scraped_data(houses_df, page_number)
-
-
-
-
-
-
